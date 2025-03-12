@@ -1,4 +1,5 @@
 import React from 'react';
+import logo from '../assets/Weblix-logo.png';
 
 const Sidebar = ({ active, toggleSidebar }) => {
   return (
@@ -7,7 +8,7 @@ const Sidebar = ({ active, toggleSidebar }) => {
         <i className="fas fa-times"></i>
       </div>
       <div className="sidebar-header">
-        <img src="/Weblix-logo.png" alt="WEBLIX Logo" className="sidebar-logo-image" />
+        <img src={logo} alt="WEBLIX Logo" className="sidebar-logo-image" />
         <div className="sidebar-company-name">
           <span className="sidebar-company-text">WEBLIX</span>
           <span className="sidebar-tagline">Your Freelancing Solution</span>

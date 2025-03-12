@@ -1,4 +1,5 @@
 import React from 'react';
+import logo from '../assets/Weblix-logo.png';
 
 const Navbar = ({ toggleSidebar }) => {
   return (
@@ -6,7 +7,7 @@ const Navbar = ({ toggleSidebar }) => {
       <div className="nav-content">
         <div className="logo-container">
           <button className="logo" onClick={() => window.scrollTo(0, 0)}>
-            <img src="/Weblix-logo.png" alt="WEBLIX Logo" className="logo-image" />
+            <img src={logo} alt="WEBLIX Logo" className="logo-image" />
           </button>
           <div className="company-name">
             <span className="company-name-text">WEBLIX</span>
