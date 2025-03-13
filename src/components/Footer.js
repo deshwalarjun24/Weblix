@@ -40,7 +40,6 @@ const Footer = () => {
           <ul className="footer-links">
             <li><i className="fas fa-phone"></i> +1 234 567 890</li>
             <li><i className="fas fa-envelope"></i> contact@weblix.com</li>
-            <li><i className="fas fa-map-marker-alt"></i> 123 Business Street, NY</li>
           </ul>
         </div>
       </div>

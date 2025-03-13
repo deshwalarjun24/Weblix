@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import logo from '../assets/Weblix-logo.png';
 
 const Sidebar = ({ active, toggleSidebar }) => {
@@ -8,7 +9,9 @@ const Sidebar = ({ active, toggleSidebar }) => {
         <i className="fas fa-times"></i>
       </div>
       <div className="sidebar-header">
-        <img src={logo} alt="WEBLIX Logo" className="sidebar-logo-image" />
+        <Link to="/" onClick={toggleSidebar}>
+          <img src={logo} alt="WEBLIX Logo" className="sidebar-logo-image" />
+        </Link>
         <div className="sidebar-company-name">
           <span className="sidebar-company-text">WEBLIX</span>
           <span className="sidebar-tagline">Your Freelancing Solution</span>
@@ -21,6 +24,9 @@ const Sidebar = ({ active, toggleSidebar }) => {
         <a href="#how-it-works" onClick={toggleSidebar}>
           <i className="fas fa-question-circle"></i> How It Works
         </a>
+        <Link to="/projects" onClick={toggleSidebar}>
+          <i className="fas fa-briefcase"></i> Projects
+        </Link>
         <a href="#testimonials" onClick={toggleSidebar}>
           <i className="fas fa-comment-alt"></i> Testimonials
         </a>
