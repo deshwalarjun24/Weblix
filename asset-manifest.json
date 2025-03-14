@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Weblix/static/css/main.1cc93127.css",
-    "main.js": "/Weblix/static/js/main.0bf2ae0a.js",
+    "main.js": "/Weblix/static/js/main.19e17060.js",
     "static/media/Background.PNG": "/Weblix/static/media/Background.cadc5a7c9139e1da74c3.PNG",
     "static/media/fa-solid-900.ttf": "/Weblix/static/media/fa-solid-900.2582b0e4bcf85eceead0.ttf",
     "static/media/fa-brands-400.ttf": "/Weblix/static/media/fa-brands-400.1815e00441357e01619e.ttf",
@@ -14,10 +14,10 @@
     "static/media/fa-v4compatibility.woff2": "/Weblix/static/media/fa-v4compatibility.ea8f94e1d22e0d35ccd4.woff2",
     "index.html": "/Weblix/index.html",
     "main.1cc93127.css.map": "/Weblix/static/css/main.1cc93127.css.map",
-    "main.0bf2ae0a.js.map": "/Weblix/static/js/main.0bf2ae0a.js.map"
+    "main.19e17060.js.map": "/Weblix/static/js/main.19e17060.js.map"
   },
   "entrypoints": [
     "static/css/main.1cc93127.css",
-    "static/js/main.0bf2ae0a.js"
+    "static/js/main.19e17060.js"
   ]
 }
