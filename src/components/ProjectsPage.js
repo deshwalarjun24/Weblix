@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 
 const ProjectsPage = () => {
   const [theme, setTheme] = useState('light');
-  const [sidebarActive, setSidebarActive] = useState(false);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState('all');
 
   useEffect(() => {
@@ -155,18 +155,18 @@ const ProjectsPage = () => {
     : allProjects.filter(project => project.category === activeCategory);
 
   const openSidebar = () => {
-    setSidebarActive(true);
+    setSidebarOpen(true);
   };
 
   const closeSidebar = () => {
-    setSidebarActive(false);
+    setSidebarOpen(false);
   };
 
   return (
     <div className="projects-page">
       <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
-      <Sidebar active={sidebarActive} toggleSidebar={closeSidebar} />
-      <div className={`overlay ${sidebarActive ? 'active' : ''}`} onClick={closeSidebar}></div>
+      <Sidebar isOpen={sidebarOpen} toggleSidebar={closeSidebar} />
+      <div className={`overlay ${sidebarOpen ? 'active' : ''}`} onClick={closeSidebar}></div>
       <Navbar toggleSidebar={openSidebar} />
       
       <div className="projects-hero">

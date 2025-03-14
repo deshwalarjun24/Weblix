@@ -1,6 +1,6 @@
 {
-  "short_name": "WEBLIX",
-  "name": "WEBLIX - Your Freelancing Solution",
+  "short_name": "Weblix",
+  "name": "Weblix - Your Freelancing Solution",
   "icons": [
     {
       "src": "Weblix-logo.png",
@@ -20,6 +20,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#4C3AE3",
+  "theme_color": "#000000",
   "background_color": "#ffffff"
 }

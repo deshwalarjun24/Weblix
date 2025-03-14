@@ -10,7 +10,11 @@ const Hero = () => {
           <a href="#services" className="btn-primary">Explore Services</a>
         </div>
         <div className="hero-image">
-          <img src="https://cdn.pixabay.com/photo/2018/04/02/21/13/business-3285343_1280.png" alt="Freelancing Illustration" />
+          <img 
+            src={`${process.env.PUBLIC_URL}/illustrator.jpg`} 
+            alt="Digital Illustrator" 
+            className="illustrator-image" 
+          />
         </div>
       </div>
     </section>

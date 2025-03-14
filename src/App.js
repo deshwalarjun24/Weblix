@@ -18,7 +18,7 @@ import ProjectsPage from './components/ProjectsPage';
 function App() {
   const [theme, setTheme] = useState('light');
   const [loading, setLoading] = useState(true);
-  const [sidebarActive, setSidebarActive] = useState(false);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
   useEffect(() => {
     // Check for saved theme preference
@@ -33,8 +33,8 @@ function App() {
 
     // Close sidebar on scroll
     const handleScroll = () => {
-      if (sidebarActive) {
-        setSidebarActive(false);
+      if (sidebarOpen) {
+        setSidebarOpen(false);
       }
     };
 
@@ -44,11 +44,11 @@ function App() {
       clearTimeout(timer);
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [sidebarActive]);
+  }, [sidebarOpen]);
 
   // Prevent body scrolling when sidebar is open
   useEffect(() => {
-    if (sidebarActive) {
+    if (sidebarOpen) {
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = 'auto';
@@ -57,7 +57,7 @@ function App() {
     return () => {
       document.body.style.overflow = 'auto';
     };
-  }, [sidebarActive]);
+  }, [sidebarOpen]);
 
   const toggleTheme = () => {
     const newTheme = theme === 'light' ? 'dark' : 'light';
@@ -67,12 +67,12 @@ function App() {
   };
 
   const closeSidebar = () => {
-    setSidebarActive(false);
+    setSidebarOpen(false);
   };
 
   // Add this function to ensure the sidebar can be opened again
   const openSidebar = () => {
-    setSidebarActive(true);
+    setSidebarOpen(true);
   };
 
   // Home page component
@@ -80,8 +80,8 @@ function App() {
     <>
       <LoadingAnimation loading={loading} />
       <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
-      <Sidebar active={sidebarActive} toggleSidebar={closeSidebar} />
-      <div className={`overlay ${sidebarActive ? 'active' : ''}`} onClick={closeSidebar}></div>
+      <Sidebar isOpen={sidebarOpen} toggleSidebar={closeSidebar} />
+      <div className={`overlay ${sidebarOpen ? 'active' : ''}`} onClick={closeSidebar}></div>
       <Navbar toggleSidebar={openSidebar} />
       <Hero />
       <Services />

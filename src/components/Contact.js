@@ -21,11 +21,14 @@ const Contact = () => {
 
   // Check for pending messages in localStorage on component mount
   useEffect(() => {
-    const pendingMessages = JSON.parse(localStorage.getItem('pendingMessages') || '[]');
-    if (pendingMessages.length > 0) {
+    // Check for pending messages in localStorage
+    const storedMessages = localStorage.getItem('pendingMessages');
+    if (storedMessages) {
+      const messages = JSON.parse(storedMessages);
+      
       setOfflineMode(prev => ({
         ...prev,
-        pendingMessages
+        pendingMessages: messages
       }));
       
       // Try to sync pending messages if we're online
@@ -48,6 +51,7 @@ const Contact = () => {
       window.removeEventListener('online', handleOnline);
       window.removeEventListener('offline', handleOffline);
     };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   
   // Handle when browser goes online
